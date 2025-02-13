@@ -1,0 +1,13 @@
+name: muxserver
+
+services:
+  muxserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - --port=8080
+        - --host=0.0.0.0
+    restart: always
+    ports:
+      - 8080:8080
